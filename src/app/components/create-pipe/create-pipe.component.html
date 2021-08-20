@@ -1,0 +1,20 @@
+<p>create-pipe works!</p>
+
+<!-- Pipe custom-->
+<input
+  style="width: fit-content"
+  type="text"
+  value="{{ user.name | examPipe: ' Happy new year':2021 }}"
+/>
+
+<!-- Pipe and directive -->
+<div>
+    <input
+        appAutofocus
+        initValue="init value"
+        type="text"
+        valueInput="{{ user.name | examPipe: ' Happy new year': 2021 }}"
+        value="init value"
+    />
+
+</div>

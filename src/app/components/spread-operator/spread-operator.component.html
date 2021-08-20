@@ -1,0 +1,16 @@
+<h3>Spread operator</h3>
+<div *ngIf="!pageLoaded; else pageReady">Loading..........</div>
+<ng-template #pageReady>
+    <div>album1 = ["Tình thôi xót xa", "Sài Gòn lụt", "Cơn mưa tình yêu", "ABCD"]</div>
+    <div>album2 = ["Sót xa"]</div>
+    <br>
+    <div>[...album1, "Sót xa"] = <strong>{{result}}</strong></div>
+    <div>["Thuan", ...album2] = <strong>{{result2}}</strong></div>
+</ng-template>
+
+<hr>
+<ng-container>
+    <h4> Copy properties của một object sang một object khác nhưng với một chút sửa đổi về giá trị của một số properties</h4>
+    <div>object1 {{rsObject1}}</div>
+    <div>object1 {{rsObject2}} <i style="color: red;">fullName thay doi -> Thuan-Duong-Minh</i></div>
+</ng-container>

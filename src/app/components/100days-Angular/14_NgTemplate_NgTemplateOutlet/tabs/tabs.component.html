@@ -1,0 +1,48 @@
+<!-- Ví dụ đơn giản về cách dùng NgTemplate và NgTemplateOutlet-->
+<app-template-outlet></app-template-outlet>
+<br>
+
+<!-- Example 2:  reuse lại một button với những tên khác nhau, 
+    Một button mình muốn có icon, và một button mình ko muốn có icon. 
+    Thì bạn hoàn toàn cũng có thể dùng kết hợp giữa ng-template, ngTemplateOutlet và ngTemplateOutletContext để viết code.
+-->
+
+<!-- Khong su dung Template -->
+<div>
+    <button class="btn btn-primary">
+        Click here
+    </button>
+    
+    <button class="btn btn-danger">
+        <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+        
+    </button>
+</div>
+<!-- END: Khong su dung Template -->
+
+
+<ng-template #buttonTmpl
+    let-labelThuan="label"
+    let-class
+    let-icon="icon">
+    <button [ngClass]="['btn', class ? class : '']">
+        <i *ngIf="icon" [class]="icon"></i>
+        {{ labelThuan }}
+    </button>
+</ng-template>
+
+<ng-container 
+    [ngTemplateOutlet]="buttonTmpl"
+    [ngTemplateOutletContext]="contextButton1">
+</ng-container>
+
+<ng-container  *ngTemplateOutlet="buttonTmpl; context: contextButton2"> </ng-container> <!--Short syntax-->
+<!-- End: Example2-->
+
+<!--Example 3: using in forloop-->
+<!-- <ng-container  *ngTemplateOutlet="forTmpl; context: context"> </ng-container>
+<ng-template #forTmpl let-values>
+    <ul *ngFor="let val of values; let i = index">
+        <li>{{val}}</li>
+    </ul>
+</ng-template> -->

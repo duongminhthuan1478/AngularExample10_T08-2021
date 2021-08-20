@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header">
+        You have selected <ng-container *ngTemplateOutlet="counterTmpl"></ng-container> items.
+    </div>
+    <div class="card-body">
+        <!-- *ngTemplateOutlet is short syntax of ngTemplateOutlet-->
+        There are <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container> items was selected.
+    </div>
+    <div class="card-footer">
+        You have selected <ng-container *ngTemplateOutlet="counterTmpl"></ng-container> items.
+    </div>
+</div>
+
+<ng-template #counterTmpl>
+    <span class="badge badge-primary">{{ counter }}</span> items
+</ng-template>
+
+<!-- -------------------------  -->
+Khi viết lại code dùng ng-template, ưu điểm dễ nhận thấy đó là:
+
+Nếu cần sửa lại UI cho counter. Thay vì phải sửa ở 3 nơi, bây giờ ta chỉ cần sửa ở một vị trí đó là ng-template của counter thôi. Tránh những lỗi typo hay find and replace bị thiếu.
+Vì phần template này chỉ gói gọn trong đúng một dòng code nên dùng ng-template tiện hơn hẳn là phải tách phần counter ra một component mới.
+<br>
+<code>
+    Ví dụ
+    <![CDATA[ 
+    <ng-template #counterTmpl>
+        <span class="badge badge-primary">{{ counter }}</span> items
+    </ng-template>
+    ]]>
+</code>
+
+

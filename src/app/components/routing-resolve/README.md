@@ -1,0 +1,5 @@
+# Developing a real world application with myriad(vô số) calls to the server can be treacherous(nguy hiểm). If you are here that means you have struggled(đấu tranh) with the delay of API calls. This delay causes user experience to deteriorate(trở nên tệ hơn). The fact is that there are a number of ways in which experience of user can be enhanced, one such way is to use Resolver guard.
+
+# Angular’s Resolver guard is used to fetch data that needs to loaded in the routed component. For Example, if you are have a feature to search subjects from courses, you will need courses to be loaded prior to the view of component.
+
+# Although, there are a lot of ways to address this issue but a Resolver provides us with more control over our routing. If there is any error or data is not as required, we can prevent component from routing.
