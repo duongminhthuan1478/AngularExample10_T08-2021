@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      <p class="card-text">
+          <!--Content seem like placeholder, will be projection when others component call with element inside selector tag component-->
+          <ng-content select="span"></ng-content>
+          <!-- select attribute: Using to select which html tags can projection into, it's also select id or.classname...-->
+      </p>
+    </div>
+  </div>

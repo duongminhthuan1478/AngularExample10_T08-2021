@@ -1,0 +1,23 @@
+<div class="tab-header">
+    <div class="tab-item-header" 
+        role="presentation"
+        [class.active]="idx === activeIndex"
+        *ngFor="let tab of tabPanelList; index as idx" 
+        (click)="activeIndexChange.emit(idx)">
+        {{tab.title}}
+      <button (click)="removeTab(tab)">x</button>
+    </div>
+  
+</div>
+  
+<div class="tab-body" *ngIf="tabPanelList.length; else noTabs">
+    <ng-container *ngFor="let tab of tabPanelList; index as idx">
+        <div *ngIf="idx === activeIndex">
+            <ng-container *ngTemplateOutlet="tab.panelBody"></ng-container>
+        </div>
+    </ng-container>
+</div>
+
+<ng-template #noTabs>
+    no tabs exist
+</ng-template>

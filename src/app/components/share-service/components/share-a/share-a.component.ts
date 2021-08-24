@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilitiesService } from 'src/app/shared/services/utilities.service';
 import { ShareDataService } from '../../services/share-data.service';
 
 @Component({
@@ -7,11 +8,14 @@ import { ShareDataService } from '../../services/share-data.service';
   styleUrls: ['./share-a.component.css']
 })
 export class ShareAComponent implements OnInit {
-
-  constructor(private shareService: ShareDataService) { }
   isOpenB = false;
+
+  constructor(
+    public shareService: ShareDataService
+  ) { }
+
   ngOnInit(): void {
-    
+
   }
 
   openB() {

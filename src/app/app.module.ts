@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CallApplyBindComponent } from './components/call-apply-bind/call-apply-bind.component';
 import { CreatePipeComponent } from './components/create-pipe/create-pipe.component';
-import { HelloWorldComponent } from './components/hello-world/hello-world.component';
 import { RoutingResolveComponent } from './components/routing-resolve/components/routing-resolve.component';
 import { AutofocusDirective } from './shared/directives/autofocus.directive';
 import { ExamPipePipe } from './shared/pipes/exam-pipe.pipe';
@@ -23,11 +22,16 @@ import {MatSelectModule} from '@angular/material/select';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { TabsComponent } from './components/100days-Angular/14_NgTemplate_NgTemplateOutlet/tabs/tabs.component';
 import { TemplateOutletComponent } from './components/100days-Angular/14_NgTemplate_NgTemplateOutlet/template-outlet/template-outlet.component';
+import { TabGroupComponent } from './components/100days-Angular/15_16_DI/tab-group/tab-group.component';
+import { TabPanelComponent } from './components/100days-Angular/15_16_DI/tab-panel/tab-panel.component';
+import { DIComponent } from './components/100days-Angular/15_16_DI/di.component';
+import { ContentProjectionComponent } from './components/100days-Angular/13_Content_Projection/content-projection/content-projection.component';
+import { MainContentProjectionComponent } from './components/100days-Angular/13_Content_Projection/main-content-projection/main-content-projection.component';
+import { TabBsGroupComponent } from './components/100days-Angular/15_16_DI/tab-bs-group/tab-bs-group.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloWorldComponent,
     AutofocusDirective,
     CallApplyBindComponent,
     CreatePipeComponent,
@@ -41,6 +45,12 @@ import { TemplateOutletComponent } from './components/100days-Angular/14_NgTempl
     DragAndDropComponent,
     TabsComponent,
     TemplateOutletComponent,
+    TabGroupComponent,
+    TabPanelComponent,
+    DIComponent,
+    ContentProjectionComponent,
+    MainContentProjectionComponent,
+    TabBsGroupComponent,
     
   ],
   imports: [

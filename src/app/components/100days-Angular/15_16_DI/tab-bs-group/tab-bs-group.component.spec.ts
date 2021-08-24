@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HelloWorldComponent } from './hello-world.component';
+import { TabBsGroupComponent } from './tab-bs-group.component';
 
-describe('HelloWorldComponent', () => {
-  let component: HelloWorldComponent;
-  let fixture: ComponentFixture<HelloWorldComponent>;
+describe('TabBsGroupComponent', () => {
+  let component: TabBsGroupComponent;
+  let fixture: ComponentFixture<TabBsGroupComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HelloWorldComponent ]
+      declarations: [ TabBsGroupComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HelloWorldComponent);
+    fixture = TestBed.createComponent(TabBsGroupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

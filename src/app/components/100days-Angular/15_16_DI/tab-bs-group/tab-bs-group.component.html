@@ -1,0 +1,22 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item" *ngFor="let tab of tabPanelList; index as idx">
+      <a class="nav-link active" 
+        (click)="activeIndexChange.emit(idx)">
+        {{tab.title}}
+        
+        <button class="btn btn-sm btn-danger" (click)="removeTab(tab)">x</button>
+      </a>
+    </li>
+</ul>
+
+<div class="tab-body" *ngIf="tabPanelList.length; else noTabs">
+    <ng-container *ngFor="let tab of tabPanelList; index as idx">
+        <div *ngIf="idx === activeIndex">
+            <ng-container *ngTemplateOutlet="tab.panelBody"></ng-container>
+        </div>
+    </ng-container>
+</div>
+
+<ng-template #noTabs>
+    no tabs exist
+</ng-template>
