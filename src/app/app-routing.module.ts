@@ -13,6 +13,7 @@ import { TabsComponent } from './components/100days-Angular/14_NgTemplate_NgTemp
 import { TabGroupComponent } from './components/100days-Angular/15_16_DI/tab-group/tab-group.component';
 import { DIComponent } from './components/100days-Angular/15_16_DI/di.component';
 import { MainContentProjectionComponent } from './components/100days-Angular/13_Content_Projection/main-content-projection/main-content-projection.component';
+import { ContentChildComponent } from './components/100days-Angular/17_ContentChild-ContentChildren/content-child.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'drag-drop', pathMatch: 'full' },
@@ -30,7 +31,9 @@ const routes: Routes = [
   //100 days 
   { path: 'day_13_ContentProjection', component: MainContentProjectionComponent},
   { path:'day_14', component: TabsComponent}, // ng-template, ng-container, ng-templateoutlet
-  { path:'day_15_16_DI', component: DIComponent} // ng-template, ng-container, ng-templateoutlet
+  { path:'day_15_16_DI', component: DIComponent}, // Dependency Injection
+  { path:'day_17_ContentChild', component: ContentChildComponent} // ContentChild, ContentChildren
+
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
 <ul class="nav nav-tabs">
     <li class="nav-item" *ngFor="let tab of tabPanelList; index as idx">
-      <a class="nav-link active" 
+      <a class="nav-link"
+        [class.active]="idx === activeIndex"
         (click)="activeIndexChange.emit(idx)">
         {{tab.title}}
         

@@ -28,6 +28,9 @@ import { DIComponent } from './components/100days-Angular/15_16_DI/di.component'
 import { ContentProjectionComponent } from './components/100days-Angular/13_Content_Projection/content-projection/content-projection.component';
 import { MainContentProjectionComponent } from './components/100days-Angular/13_Content_Projection/main-content-projection/main-content-projection.component';
 import { TabBsGroupComponent } from './components/100days-Angular/15_16_DI/tab-bs-group/tab-bs-group.component';
+import { ContentChildComponent } from './components/100days-Angular/17_ContentChild-ContentChildren/content-child.component';
+import { CounterComponent } from './components/100days-Angular/17_ContentChild-ContentChildren/counter/counter.component';
+import { TabContentDirective } from './components/100days-Angular/17_ContentChild-ContentChildren/tab-content-directive/tab-panel-directive.directive';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,9 @@ import { TabBsGroupComponent } from './components/100days-Angular/15_16_DI/tab-b
     ContentProjectionComponent,
     MainContentProjectionComponent,
     TabBsGroupComponent,
+    ContentChildComponent,
+    CounterComponent,
+    TabContentDirective
     
   ],
   imports: [
