@@ -31,6 +31,8 @@ import { TabBsGroupComponent } from './components/100days-Angular/15_16_DI/tab-b
 import { ContentChildComponent } from './components/100days-Angular/17_ContentChild-ContentChildren/content-child.component';
 import { CounterComponent } from './components/100days-Angular/17_ContentChild-ContentChildren/counter/counter.component';
 import { TabContentDirective } from './components/100days-Angular/17_ContentChild-ContentChildren/tab-content-directive/tab-panel-directive.directive';
+import { CustomSearchPipeComponent } from './components/100days-Angular/18_custom-search-pipe/custom-search-pipe.component';
+import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { TabContentDirective } from './components/100days-Angular/17_ContentChil
     TabBsGroupComponent,
     ContentChildComponent,
     CounterComponent,
-    TabContentDirective
+    TabContentDirective,
+    CustomSearchPipeComponent,
+    FilterSearchPipe
     
   ],
   imports: [

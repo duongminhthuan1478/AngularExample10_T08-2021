@@ -1,0 +1,19 @@
+<input type="text" id="searchInput" class="m-3" placeholder="Search Country" [(ngModel)]="searchText"/>
+
+
+<table class="ml-3 table w-25">
+  <thead>
+    <tr>
+      <th scope="col">Index</th>
+      <th scope="col">Name</th>
+      <th scope="col">Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ct of countries | filterSearchPipe: searchText; let idx = index">
+      <td>{{idx + 1}}</td>
+      <td>{{ct.name}}</td>
+      <td>{{ct.code}}</td>
+    </tr>
+  </tbody>
+</table>
