@@ -15,6 +15,7 @@ import { DIComponent } from './components/100days-Angular/15_16_DI/di.component'
 import { MainContentProjectionComponent } from './components/100days-Angular/13_Content_Projection/main-content-projection/main-content-projection.component';
 import { ContentChildComponent } from './components/100days-Angular/17_ContentChild-ContentChildren/content-child.component';
 import { CustomSearchPipeComponent } from './components/100days-Angular/18_custom-search-pipe/custom-search-pipe.component';
+import { RxjsObservableComponent } from './components/100days-Angular/19_20_Rxjs-Creation/rxjs-observable.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'drag-drop', pathMatch: 'full' },
@@ -34,7 +35,8 @@ const routes: Routes = [
   { path:'day_14', component: TabsComponent}, // ng-template, ng-container, ng-templateoutlet
   { path:'day_15_16_DI', component: DIComponent}, // Dependency Injection
   { path:'day_17_ContentChild', component: ContentChildComponent}, // ContentChild, ContentChildren
-  { path:'day_18_pipe', component: CustomSearchPipeComponent}
+  { path:'day_18_pipe', component: CustomSearchPipeComponent},
+  { path:'day_19_20_rxjs', component: RxjsObservableComponent}
   
 ];
 

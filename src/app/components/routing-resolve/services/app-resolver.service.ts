@@ -20,7 +20,7 @@ export class AppResolverService implements Resolve<string>{
   /** case2: return Observable */
   // resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
   //   // throw new Error('Method not implemented.');
-  //   return this.http.get('https://jsonplaceholder.typicode.com/posts/1/comments');
+    // return this.http.get('https://jsonplaceholder.typicode.com/posts/1/comments');
   // }
 
   /** case3: return Promise */

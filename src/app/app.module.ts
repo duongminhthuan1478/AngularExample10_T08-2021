@@ -33,6 +33,7 @@ import { CounterComponent } from './components/100days-Angular/17_ContentChild-C
 import { TabContentDirective } from './components/100days-Angular/17_ContentChild-ContentChildren/tab-content-directive/tab-panel-directive.directive';
 import { CustomSearchPipeComponent } from './components/100days-Angular/18_custom-search-pipe/custom-search-pipe.component';
 import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
+import { RxjsObservableComponent } from './components/100days-Angular/19_20_Rxjs-Creation/rxjs-observable.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
     CounterComponent,
     TabContentDirective,
     CustomSearchPipeComponent,
-    FilterSearchPipe
+    FilterSearchPipe,
+    RxjsObservableComponent
     
   ],
   imports: [

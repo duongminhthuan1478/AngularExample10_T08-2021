@@ -1,0 +1,31 @@
+<div class="ml-1 mt-1">
+    <p>This is Observalbal createed from of() method: 
+        <span class="text-primary"> {{observableOf | async}}</span>
+    </p>
+
+    <hr>
+        <p>from('tada') -> t,a,d,a: <span class="text-primary">{{observableFrom | async}}</span></p>
+        <p>from(Promise.resolve('thuan')): <span class="text-danger">{{observableFrom1| async}}</span></p>
+    <hr>
+
+    <h2 class="fw-bold text-success">fromEvent, lắng nghe các sự kiện như mouse, click, ....</h2>
+    <div class="box" style="width: 500px; height: 50px; background-color: aqua;" ></div>
+    <button id="btnFromEvent" (click)="onClickFromEvent()">FromEvent</button>
+
+    <h2 class="text-success">interval & timmer</h2>
+    <p>Interval: <span class="text-primary">{{observableInterval | async}}</span></p>
+    <p>Timmer : <span class="text-primary">{{observableTimer | async}}</span></p>
+
+    <hr>
+    <h2 class="text-success">Introduction defer: </h2>
+    <p>No-Defer1: <span class="text-danger">{{noDefer1 | async}}</span></p>
+    <p>No-Defer2: <span class="text-danger">{{noDefer2 | async}}</span></p>
+    <h4 class="text-info"> Using Defer: when subscribe is called, defer is () so it's execute lazy and call Promise.resolve and return new Observable so new value will be created </h4>
+    <p>Defer1: <span class="text-primary">{{obDefer1 | async}}</span></p>
+    <p>Defer2: <span class="text-primary">{{obDefer2 | async}}</span></p>
+
+</div>
+
+
+
+
