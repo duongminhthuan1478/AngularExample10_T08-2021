@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { defer } from 'rxjs';
 import { from, fromEvent, fromEventPattern, interval, Observable, of, timer } from 'rxjs';
-import { takeUntil, throttleTime, } from 'rxjs/operators/';
+import { take, takeUntil, throttleTime, } from 'rxjs/operators/';
 
 /**
  * Note: All example from this will be return a Observable
@@ -52,7 +52,8 @@ export class RxjsObservableComponent implements OnInit {
 
     //using interval; start from 0, 1s will emit new value
     // takeUntil timer: stop after 10s
-    this.observableInterval = interval(1000).pipe(takeUntil(timer(10000)));
+    // this.observableInterval = interval(1000).pipe(takeUntil(timer(10000)));
+    this.observableInterval = interval(1000).pipe(take(5)); // timer1 will emit a value every 1000ms for 5 iterations
     this.observableTimer = timer(5000, 1000); // Sau 5s delay, thì chạy interval 1s 1 lần
 
     const randomNoDefer$ = of(Math.random());

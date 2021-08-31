@@ -1,3 +1,4 @@
+import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_Rxjs_Transform_Operator(Pipe)/rxjs-transform-operator.component';
 import { DragAndDropComponent } from './components/Angular-Material/drag-and-drop/drag-and-drop.component';
 import { ShareAComponent } from './components/share-service/components/share-a/share-a.component';
 import { AsyncAwaitComponent } from './components/async-await/async-await.component';
@@ -10,7 +11,6 @@ import { CreatePipeComponent } from './components/create-pipe/create-pipe.compon
 import { RoutingResolveComponent } from './components/routing-resolve/components/routing-resolve.component';
 import { AppResolverService } from './components/routing-resolve/services/app-resolver.service';
 import { TabsComponent } from './components/100days-Angular/14_NgTemplate_NgTemplateOutlet/tabs/tabs.component';
-import { TabGroupComponent } from './components/100days-Angular/15_16_DI/tab-group/tab-group.component';
 import { DIComponent } from './components/100days-Angular/15_16_DI/di.component';
 import { MainContentProjectionComponent } from './components/100days-Angular/13_Content_Projection/main-content-projection/main-content-projection.component';
 import { ContentChildComponent } from './components/100days-Angular/17_ContentChild-ContentChildren/content-child.component';
@@ -36,7 +36,9 @@ const routes: Routes = [
   { path:'day_15_16_DI', component: DIComponent}, // Dependency Injection
   { path:'day_17_ContentChild', component: ContentChildComponent}, // ContentChild, ContentChildren
   { path:'day_18_pipe', component: CustomSearchPipeComponent},
-  { path:'day_19_20_rxjs', component: RxjsObservableComponent}
+  { path:'day_19_20_rxjs', component: RxjsObservableComponent},
+  { path:'day_21_rxjs_transformOperator', component: RxjsTransformOperatorComponent},
+
   
 ];
 

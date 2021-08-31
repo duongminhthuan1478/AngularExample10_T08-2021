@@ -1,0 +1,30 @@
+<div class="ml-1 mt-1">
+    <strong class="text-info">Original Users</strong>
+    <ul> <li > {{users | json}} </li> </ul>
+
+    <ng-container *ngIf="showOperatorMap">
+        <strong class="text-info">Using map() to add new `fullname` property</strong>
+        <ul> <li> {{ resultMapOb | json }} </li> </ul>
+    </ng-container>
+    
+
+    <ng-container *ngIf="showOperatorReduce">
+        <strong class="text-info">Using reduce() to conver Users to Object </strong>
+        <ul> <li> {{ resultMapOb | json }} </li> </ul>
+    </ng-container>
+
+    <ng-container *ngIf="showOperatorReduceAndScan">
+        <strong class="text-info">Different Reduce and scan </strong>
+        <ul> <li> Check console </li> </ul>
+    </ng-container>
+
+    <ng-container *ngIf="showOperatorScan">
+        <strong class="text-info">Using scan to management object state</strong>
+        <ul> <li> {{ resultMapOb | json }} </li> </ul>
+    </ng-container>
+
+</div>
+
+
+
+

@@ -34,6 +34,7 @@ import { TabContentDirective } from './components/100days-Angular/17_ContentChil
 import { CustomSearchPipeComponent } from './components/100days-Angular/18_custom-search-pipe/custom-search-pipe.component';
 import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
 import { RxjsObservableComponent } from './components/100days-Angular/19_20_Rxjs-Creation/rxjs-observable.component';
+import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_Rxjs_Transform_Operator(Pipe)/rxjs-transform-operator.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { RxjsObservableComponent } from './components/100days-Angular/19_20_Rxjs
     TabContentDirective,
     CustomSearchPipeComponent,
     FilterSearchPipe,
-    RxjsObservableComponent
+    RxjsObservableComponent,
+    RxjsTransformOperatorComponent
     
   ],
   imports: [
