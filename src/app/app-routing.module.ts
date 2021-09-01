@@ -1,4 +1,4 @@
-import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_Rxjs_Transform_Operator(Pipe)/rxjs-transform-operator.component';
+import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_rxjs_transform-operator(Pipe)/rxjs-transform-operator.component';
 import { DragAndDropComponent } from './components/Angular-Material/drag-and-drop/drag-and-drop.component';
 import { ShareAComponent } from './components/share-service/components/share-a/share-a.component';
 import { AsyncAwaitComponent } from './components/async-await/async-await.component';
@@ -10,12 +10,12 @@ import { CallApplyBindComponent } from './components/call-apply-bind/call-apply-
 import { CreatePipeComponent } from './components/create-pipe/create-pipe.component';
 import { RoutingResolveComponent } from './components/routing-resolve/components/routing-resolve.component';
 import { AppResolverService } from './components/routing-resolve/services/app-resolver.service';
-import { TabsComponent } from './components/100days-Angular/14_NgTemplate_NgTemplateOutlet/tabs/tabs.component';
+import { TabsComponent } from './components/100days-Angular/14_ngTemplate_ngTemplateOutlet/tabs/tabs.component';
 import { DIComponent } from './components/100days-Angular/15_16_DI/di.component';
-import { MainContentProjectionComponent } from './components/100days-Angular/13_Content_Projection/main-content-projection/main-content-projection.component';
-import { ContentChildComponent } from './components/100days-Angular/17_ContentChild-ContentChildren/content-child.component';
+import { MainContentProjectionComponent } from './components/100days-Angular/13_content-projection/main-content-projection/main-content-projection.component';
+import { ContentChildComponent } from './components/100days-Angular/17_contentChild-contentChildren/content-child.component';
 import { CustomSearchPipeComponent } from './components/100days-Angular/18_custom-search-pipe/custom-search-pipe.component';
-import { RxjsObservableComponent } from './components/100days-Angular/19_20_Rxjs-Creation/rxjs-observable.component';
+import { RxjsObservableComponent } from './components/100days-Angular/19_20_rxjs-creation/rxjs-observable.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'drag-drop', pathMatch: 'full' },

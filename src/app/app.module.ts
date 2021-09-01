@@ -20,21 +20,22 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DragAndDropComponent } from './components/Angular-Material/drag-and-drop/drag-and-drop.component';
 import {MatSelectModule} from '@angular/material/select';
 import { MultiSelectModule } from 'primeng/multiselect';
-import { TabsComponent } from './components/100days-Angular/14_NgTemplate_NgTemplateOutlet/tabs/tabs.component';
-import { TemplateOutletComponent } from './components/100days-Angular/14_NgTemplate_NgTemplateOutlet/template-outlet/template-outlet.component';
+import { TabsComponent } from './components/100days-Angular/14_ngTemplate_ngTemplateOutlet/tabs/tabs.component';
+import { TemplateOutletComponent } from './components/100days-Angular/14_ngTemplate_ngTemplateOutlet/template-outlet/template-outlet.component';
 import { TabGroupComponent } from './components/100days-Angular/15_16_DI/tab-group/tab-group.component';
 import { TabPanelComponent } from './components/100days-Angular/15_16_DI/tab-panel/tab-panel.component';
 import { DIComponent } from './components/100days-Angular/15_16_DI/di.component';
-import { ContentProjectionComponent } from './components/100days-Angular/13_Content_Projection/content-projection/content-projection.component';
-import { MainContentProjectionComponent } from './components/100days-Angular/13_Content_Projection/main-content-projection/main-content-projection.component';
+import { ContentProjectionComponent } from './components/100days-Angular/13_content-projection/content-projection/content-projection.component';
+import { MainContentProjectionComponent } from './components/100days-Angular/13_content-projection/main-content-projection/main-content-projection.component';
 import { TabBsGroupComponent } from './components/100days-Angular/15_16_DI/tab-bs-group/tab-bs-group.component';
-import { ContentChildComponent } from './components/100days-Angular/17_ContentChild-ContentChildren/content-child.component';
-import { CounterComponent } from './components/100days-Angular/17_ContentChild-ContentChildren/counter/counter.component';
-import { TabContentDirective } from './components/100days-Angular/17_ContentChild-ContentChildren/tab-content-directive/tab-panel-directive.directive';
+import { ContentChildComponent } from './components/100days-Angular/17_contentChild-contentChildren/content-child.component';
+import { CounterComponent } from './components/100days-Angular/17_contentChild-contentChildren/counter/counter.component';
+import { TabContentDirective } from './components/100days-Angular/17_contentChild-contentChildren/tab-content-directive/tab-panel-directive.directive';
 import { CustomSearchPipeComponent } from './components/100days-Angular/18_custom-search-pipe/custom-search-pipe.component';
 import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
-import { RxjsObservableComponent } from './components/100days-Angular/19_20_Rxjs-Creation/rxjs-observable.component';
-import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_Rxjs_Transform_Operator(Pipe)/rxjs-transform-operator.component';
+import { RxjsObservableComponent } from './components/100days-Angular/19_20_rxjs-creation/rxjs-observable.component';
+import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_rxjs_transform-operator(Pipe)/rxjs-transform-operator.component';
+import { FilteringOperatorRxjsComponent } from './components/100days-Angular/22_rxjs-filtering-operator/filtering-operator-rxjs/filtering-operator-rxjs.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_
     CustomSearchPipeComponent,
     FilterSearchPipe,
     RxjsObservableComponent,
-    RxjsTransformOperatorComponent
+    RxjsTransformOperatorComponent,
+    FilteringOperatorRxjsComponent
     
   ],
   imports: [

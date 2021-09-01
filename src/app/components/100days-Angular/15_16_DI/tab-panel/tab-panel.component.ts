@@ -1,6 +1,5 @@
 import { Component, ContentChild, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { UtilitiesService } from 'src/app/shared/services/utilities.service';
-import { TabContentDirective } from '../../17_ContentChild-ContentChildren/tab-content-directive/tab-panel-directive.directive';
+import { TabContentDirective } from '../../17_contentChild-contentChildren/tab-content-directive/tab-panel-directive.directive';
 import { TabGroupComponent } from '../tab-group/tab-group.component';
 
 @Component({

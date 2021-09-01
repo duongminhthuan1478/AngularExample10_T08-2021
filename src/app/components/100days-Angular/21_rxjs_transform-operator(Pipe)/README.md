@@ -10,5 +10,6 @@ truyền xuống một [] thì value trong map sẽ nhận là một [], để v
 # Operators:  map(), reduce(), toArray(), mapTo(), buffer() - bufferTime()
 # Refer: 
 - https://github.com/angular-vietnam/100-days-of-angular/blob/master/Day021-rxjs-transformation.md
+- https://www.youtube.com/watch?v=AG97A7_NCLE&list=PLVmX3uPQtp3vXOXUOl8gDIA_43_pmIdFN&index=21
 - https://rxjs.dev/api/operators/toArray
  
