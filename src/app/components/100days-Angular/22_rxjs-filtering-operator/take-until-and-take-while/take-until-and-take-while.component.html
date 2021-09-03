@@ -1,0 +1,28 @@
+<div class="ml-1">
+    <ng-container *ngIf="showUsingSubscription">
+        <h2 class="fw-bold text-success">Using subscription to unsubscribe two BehaviorSubject</h2>
+        <div>First press Unsubscribe and then presss Emit Value button</div>
+        <div>The result is subscribe cannot catch new values after unsubscribe() run</div>
+        <ng-container *ngTemplateOutlet="templateBtn"> </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="showUsingTakeUntil">
+        <h2 class="fw-bold text-success">Using takeUntil & Subject to unsubscribe two BehaviorSubject</h2>
+        <div>First press Stop subscribe and then presss Emit Value button</div>
+        <div>The result is subscribe cannot catch new values after unsubscribe() run</div>
+        <button class="btn btn-danger"(click)="stopSubscribe()">Stop subscribe</button>
+        <button class="btn btn-primary"(click)="nextValue()">Emit Value</button>
+    </ng-container>
+
+    <ng-container *ngIf="showUsingTakeWhile">
+        <h2 class="fw-bold text-success">Using takeWhile to complete (stop) Interval Observable</h2>
+        <pre>Run: interval(1000).pipe(takeWhile(x => x < 5)) </pre>
+        <div>Result is: <span class="text-primary">{{resultTakeWhile | async}}</span></div>
+    </ng-container>
+</div>
+
+
+<ng-template #templateBtn>
+    <button class="btn btn-danger" (click)="subscription.unsubscribe()">Unsubscribe</button>
+    <button class="btn btn-primary"(click)="nextValue()">Emit Value</button>
+</ng-template>

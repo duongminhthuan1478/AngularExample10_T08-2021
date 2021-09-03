@@ -35,7 +35,9 @@ import { CustomSearchPipeComponent } from './components/100days-Angular/18_custo
 import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
 import { RxjsObservableComponent } from './components/100days-Angular/19_20_rxjs-creation/rxjs-observable.component';
 import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_rxjs_transform-operator(Pipe)/rxjs-transform-operator.component';
-import { FilteringOperatorRxjsComponent } from './components/100days-Angular/22_rxjs-filtering-operator/filtering-operator-rxjs/filtering-operator-rxjs.component';
+import { FilteringOperatorRxjsComponent } from './components/100days-Angular/22_rxjs-filtering-operator/filtering-operator-rxjs.component';
+import { TakeUntilAndTakeWhileComponent } from './components/100days-Angular/22_rxjs-filtering-operator/take-until-and-take-while/take-until-and-take-while.component';
+import { RaiseLimitingComponent } from './components/100days-Angular/22_rxjs-filtering-operator/raise-limiting/raise-limiting.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { FilteringOperatorRxjsComponent } from './components/100days-Angular/22_
     FilterSearchPipe,
     RxjsObservableComponent,
     RxjsTransformOperatorComponent,
-    FilteringOperatorRxjsComponent
+    FilteringOperatorRxjsComponent,
+    TakeUntilAndTakeWhileComponent,
+    RaiseLimitingComponent
     
   ],
   imports: [

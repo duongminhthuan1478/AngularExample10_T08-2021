@@ -1,3 +1,4 @@
+import { FilteringOperatorRxjsComponent } from './components/100days-Angular/22_rxjs-filtering-operator/filtering-operator-rxjs.component';
 import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_rxjs_transform-operator(Pipe)/rxjs-transform-operator.component';
 import { DragAndDropComponent } from './components/Angular-Material/drag-and-drop/drag-and-drop.component';
 import { ShareAComponent } from './components/share-service/components/share-a/share-a.component';
@@ -37,7 +38,8 @@ const routes: Routes = [
   { path:'day_17_ContentChild', component: ContentChildComponent}, // ContentChild, ContentChildren
   { path:'day_18_pipe', component: CustomSearchPipeComponent},
   { path:'day_19_20_rxjs', component: RxjsObservableComponent},
-  { path:'day_21_rxjs_transformOperator', component: RxjsTransformOperatorComponent},
+  { path:'day_21_rxjs_transform_operator', component: RxjsTransformOperatorComponent},
+  { path:'day_22_filtering_oerator', component: FilteringOperatorRxjsComponent},
 
   
 ];
