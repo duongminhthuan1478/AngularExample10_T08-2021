@@ -38,6 +38,9 @@ import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_
 import { FilteringOperatorRxjsComponent } from './components/100days-Angular/22_rxjs-filtering-operator/filtering-operator-rxjs.component';
 import { TakeUntilAndTakeWhileComponent } from './components/100days-Angular/22_rxjs-filtering-operator/take-until-and-take-while/take-until-and-take-while.component';
 import { RaiseLimitingComponent } from './components/100days-Angular/22_rxjs-filtering-operator/raise-limiting/raise-limiting.component';
+import { NotificationToasterComponent } from './shared/components/notification-toaster/notification-toaster.component';
+import { RxjxCombinationComponent } from './components/100days-Angular/23_rxjs-combination/rxjx-combination.component';
+import { MenuBarComponent } from './shared/components/menu-bar/menu-bar.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +73,10 @@ import { RaiseLimitingComponent } from './components/100days-Angular/22_rxjs-fil
     RxjsTransformOperatorComponent,
     FilteringOperatorRxjsComponent,
     TakeUntilAndTakeWhileComponent,
-    RaiseLimitingComponent
+    RaiseLimitingComponent,
+    NotificationToasterComponent,
+    RxjxCombinationComponent,
+    MenuBarComponent
     
   ],
   imports: [

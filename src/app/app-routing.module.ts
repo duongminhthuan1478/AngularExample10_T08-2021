@@ -1,3 +1,4 @@
+import { NotificationToasterComponent } from './shared/components/notification-toaster/notification-toaster.component';
 import { FilteringOperatorRxjsComponent } from './components/100days-Angular/22_rxjs-filtering-operator/filtering-operator-rxjs.component';
 import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_rxjs_transform-operator(Pipe)/rxjs-transform-operator.component';
 import { DragAndDropComponent } from './components/Angular-Material/drag-and-drop/drag-and-drop.component';
@@ -17,6 +18,7 @@ import { MainContentProjectionComponent } from './components/100days-Angular/13_
 import { ContentChildComponent } from './components/100days-Angular/17_contentChild-contentChildren/content-child.component';
 import { CustomSearchPipeComponent } from './components/100days-Angular/18_custom-search-pipe/custom-search-pipe.component';
 import { RxjsObservableComponent } from './components/100days-Angular/19_20_rxjs-creation/rxjs-observable.component';
+import { RxjxCombinationComponent } from './components/100days-Angular/23_rxjs-combination/rxjx-combination.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'drag-drop', pathMatch: 'full' },
@@ -39,7 +41,10 @@ const routes: Routes = [
   { path:'day_18_pipe', component: CustomSearchPipeComponent},
   { path:'day_19_20_rxjs', component: RxjsObservableComponent},
   { path:'day_21_rxjs_transform_operator', component: RxjsTransformOperatorComponent},
-  { path:'day_22_filtering_oerator', component: FilteringOperatorRxjsComponent},
+  { path:'day_22_rxjs_filtering_oerator', component: FilteringOperatorRxjsComponent},
+  { path:'day_23_rxjs_combination', component: RxjxCombinationComponent},
+
+  { path:'notificaiton', component: NotificationToasterComponent},
 
   
 ];

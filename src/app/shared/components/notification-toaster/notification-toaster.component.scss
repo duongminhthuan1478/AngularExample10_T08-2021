@@ -1,0 +1,25 @@
+.notification-bar {
+    background-color: #6c757d;
+    font-size: large;
+    color: white;
+    position: fixed;
+    z-index: 1000;
+}
+
+.success {
+    background-color: #28a745;
+}
+.error {
+    background-color: red;
+}
+.warning {
+    background-color: #ffc107;
+}
+.info {
+    background-color: #007bff;
+}
+.btnClose {
+    background-color: transparent;
+    border: 0;
+    color: white;
+}

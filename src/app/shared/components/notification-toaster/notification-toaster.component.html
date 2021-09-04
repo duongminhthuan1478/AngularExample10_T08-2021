@@ -1,0 +1,9 @@
+<div *ngIf="showToaster" 
+    class="col-12 p-2 notification-bar text-center" 
+    [class]=" {'success': typeToaster === 'success',
+    'error': typeToaster === 'error',
+    'info': typeToaster === 'info',
+    'warning': typeToaster === 'warning'}">
+    {{message}}
+    <button class="btnClose pull-right" (click)="dismiss()">x</button>
+</div>
