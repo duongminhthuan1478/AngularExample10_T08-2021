@@ -14,7 +14,6 @@ const observal = {
 
 export class NotificationToasterComponent implements OnInit {
   public alertDismiss$ = new Subject<boolean>();
-  public alertTimeEnd$ = new Subject<boolean>();
   
   showToaster = false;
   message = "Toaster Notiification works!!!"
@@ -33,7 +32,7 @@ export class NotificationToasterComponent implements OnInit {
         this.message = toaster.message
 
         // Cách 1 tự đóng handleDisplayToaster và sử dụng dismiss() để đóng
-        this.handleDisplayToaster();
+        // this.handleDisplayToaster();
         // Cách 2: sử dụng combination race, race sẽ lắng nghe các subject, subject nào emit trước thì xử lý trước để đóng toaster
         // cách này có thể dễ dàng áp dụng cho các trường hợp để đóng toaster như: click x, time end, component destroy
         this.handleDisplayToaster2();
@@ -57,22 +56,11 @@ export class NotificationToasterComponent implements OnInit {
 
   public handleDisplayToaster2() {
     this.showToaster = true;
-    timer(5000).subscribe(val => {
-      this.alertDismiss$.next(true);
-      this.alertDismiss$.complete();
-    });
-
-    const dissmissCondition = [this.alertDismiss$, this.alertTimeEnd$];
+    const dissmissCondition = [this.alertDismiss$, timer(5000)];
     race(...dissmissCondition).subscribe(val => {
       this.showToaster = false;
     });
   }
-
- 
-  
-
-
-
 }
 
 export interface Toaster{

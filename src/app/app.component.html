@@ -8,5 +8,11 @@
 </div>
 
 
+<ng-container *ngIf="_utils.getisLoading() | async">
+    <div class="spinner-grow text-danger d-flex centered"  style="font-size: xx-large" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+</ng-container>
+
 <app-notification-toaster></app-notification-toaster>
 
