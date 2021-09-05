@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { timer, Observable, Subject, race } from 'rxjs';
 import { UtilsService } from '../../services/utils.service';
-const observal = {
-  next: (val) => console.log('nextValue', val),
-  error: (err) => console.log('error', err),
-  complete: () => console.log('complete')
-};
+
 @Component({
   selector: 'app-notification-toaster',
   templateUrl: './notification-toaster.component.html',

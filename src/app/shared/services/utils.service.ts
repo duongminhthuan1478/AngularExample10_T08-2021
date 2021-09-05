@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { Toaster } from '../components/notification-toaster/notification-toaster.component';
-import { ApiResponse } from './interfaces';
+import { ApiResponse } from '../../utils/interfaces';
 
 @Injectable({
   providedIn: 'root'

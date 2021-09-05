@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { defer } from 'rxjs';
 import { from, fromEvent, fromEventPattern, interval, Observable, of, timer } from 'rxjs';
 import { take, takeUntil, throttleTime, } from 'rxjs/operators/';
+import { observal } from 'src/app/utils/constants';
 
 /**
  * Note: All example from this will be return a Observable
@@ -28,11 +29,6 @@ export class RxjsObservableComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    const observal = {
-      next: (val) => console.log('nextValue', val),
-      error: (err) => console.log('error', err),
-      complete: () => console.log('complete')
-    };
 
     // create Observabel by of method
     this.observableOf = of('Hello Observable this is created from of() method');

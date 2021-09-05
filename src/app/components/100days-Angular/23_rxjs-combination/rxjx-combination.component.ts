@@ -4,12 +4,7 @@ import { UtilsService } from 'src/app/shared/services/utils.service';
 import { concat, interval, merge, Observable } from 'rxjs';
 import { distinct, endWith, filter, map, startWith, take, withLatestFrom } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-
-const observal = {
-  next: (val) => console.log('nextValue', val),
-  error: (err) => console.log('error', err),
-  complete: () => console.log('complete')
-};
+import { observal } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-rxjx-combination',

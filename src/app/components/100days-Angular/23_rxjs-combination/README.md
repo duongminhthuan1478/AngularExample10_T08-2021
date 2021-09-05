@@ -9,5 +9,6 @@
 
 
 # Refer: https://github.com/angular-vietnam/100-days-of-angular/blob/master/Day023-rxjs-combination.md
+# Video: https://www.youtube.com/watch?v=qChj6nScvl0&list=PLVmX3uPQtp3vXOXUOl8gDIA_43_pmIdFN&index=24
 
 Offical document: https://rxjs.dev/api/operators/

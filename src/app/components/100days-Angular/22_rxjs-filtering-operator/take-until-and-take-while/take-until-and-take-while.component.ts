@@ -1,12 +1,7 @@
 import { takeUntil, takeWhile } from 'rxjs/operators/';
 import { Component, OnInit } from '@angular/core';
 import { Subject, BehaviorSubject, Subscription, interval, Observable } from 'rxjs';
-
-const observal = {
-  next: (val) => console.log('nextValue', val),
-  error: (err) => console.log('error', err),
-  complete: () => console.log('complete')
-};
+import { observal } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-take-until-and-take-while',

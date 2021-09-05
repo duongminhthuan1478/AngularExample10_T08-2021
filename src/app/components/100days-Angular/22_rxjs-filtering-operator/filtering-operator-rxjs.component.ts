@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { from, interval } from 'rxjs';
 import { distinct, distinctUntilChanged, distinctUntilKeyChanged, filter, find, first, take, takeLast } from 'rxjs/operators/';
-
-const observal = {
-  next: (val) => console.log('nextValue', val),
-  error: (err) => console.log('error', err),
-  complete: () => console.log('complete')
-};
+import { observal } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-filtering-operator-rxjs',
@@ -24,7 +19,7 @@ export class FilteringOperatorRxjsComponent implements OnInit {
 
   private exampleFilters() {
     // filter(), subscribe to view result
-    from(this.items).pipe(filter(x => x % 2 !== 0));
+    from(this.items).pipe(filter(x => x % 2 !== 0)).subscribe(observal);
 
     // first() with condition, throw error if Observable empty
     // Similar to last()

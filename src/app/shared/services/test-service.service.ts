@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: "root"
 })
-export class UtilitiesService {
+export class TestService {
   public thuanGlobalTest;
 
   constructor() { 

@@ -1,5 +1,4 @@
 import { Component, ContentChildren, EventEmitter, Input, OnInit, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { UtilitiesService } from 'src/app/shared/services/utilities.service';
 import { TabPanelComponent } from '../tab-panel/tab-panel.component';
 
 @Component({

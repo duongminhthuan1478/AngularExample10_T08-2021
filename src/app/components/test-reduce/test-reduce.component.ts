@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { reduceDuplicate } from 'src/app/utils/function-utils';
+import { reduceDuplicate } from 'src/app/utils/functions';
 
 @Component({
   selector: 'app-test-reduce',
