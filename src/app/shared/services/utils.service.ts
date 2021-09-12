@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { catchError, map, startWith } from 'rxjs/operators';
 import { Toaster } from '../components/notification-toaster/notification-toaster.component';
 import { ApiResponse } from '../../utils/interfaces';
 
@@ -33,7 +33,8 @@ export class UtilsService {
     // Refer: https://rxjs.dev/api/operators/startWith
     return apiCall.pipe(
       map(data => ({isLoading: false, data, error: ''})),
-      startWith({isLoading: true, data: null, error: ''}) 
+      startWith({isLoading: true, data: null, error: ''}),
+      catchError(err => of({isLoading: false, data: null, error: err.message}))
     )
   }
   

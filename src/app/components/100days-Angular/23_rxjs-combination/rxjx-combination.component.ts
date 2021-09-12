@@ -4,7 +4,7 @@ import { UtilsService } from 'src/app/shared/services/utils.service';
 import { concat, interval, merge, Observable } from 'rxjs';
 import { distinct, endWith, filter, map, startWith, take, withLatestFrom } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { observal } from 'src/app/utils/constants';
+import { observal, URL_GET_EARTHQUAKE } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-rxjx-combination',
@@ -32,7 +32,7 @@ export class RxjxCombinationComponent implements OnInit {
   }
 
   private exampleStartWith() {
-    const apiCall = this.http.get('https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-20');
+    const apiCall = this.http.get(URL_GET_EARTHQUAKE);
     // can using pipe to convert response result, add new property username: 'Duong Minh Thuan'
     // Access into getApiResponse to check how startWith is used in loading spinner, loading spinner added at app.component.html
     this._utils.getApiResponse(apiCall).pipe(map(data => {

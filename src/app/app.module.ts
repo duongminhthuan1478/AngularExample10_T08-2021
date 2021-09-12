@@ -41,6 +41,8 @@ import { RaiseLimitingComponent } from './components/100days-Angular/22_rxjs-fil
 import { NotificationToasterComponent } from './shared/components/notification-toaster/notification-toaster.component';
 import { RxjxCombinationComponent } from './components/100days-Angular/23_rxjs-combination/rxjx-combination.component';
 import { MenuBarComponent } from './shared/components/menu-bar/menu-bar.component';
+import { RxjsErrorConditionComponent } from './components/100days-Angular/24_rxjs-error-condition/rxjs-error-condition.component';
+import { PageErrorComponent } from './shared/components/page-error/page-error.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,9 @@ import { MenuBarComponent } from './shared/components/menu-bar/menu-bar.componen
     RaiseLimitingComponent,
     NotificationToasterComponent,
     RxjxCombinationComponent,
-    MenuBarComponent
+    MenuBarComponent,
+    RxjsErrorConditionComponent,
+    PageErrorComponent
     
   ],
   imports: [

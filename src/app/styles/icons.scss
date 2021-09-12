@@ -1,0 +1,28 @@
+.ic-common {
+    color: white;
+    font-size: 20px;
+    top: 3px;
+    padding-right: 5px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
+
+.icon-404 {
+    content: url("/assets/icons/car_bf.png");
+    filter: invert(50%) sepia(30%) saturate(7000%) hue-rotate(17deg) brightness(10%) contrast(100%);
+}
+
+.icon-404:hover {
+    filter: none;
+    content: url("/assets/icons/car.png");
+}
+
+// .filter-color {
+//       filter: invert(50%) sepia(30%) saturate(7000%) hue-rotate(17deg) brightness(10%) contrast(100%);
+//   }
+  
+// .filter-color:hover {
+//     // filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(190deg) brightness(150%) contrast(100%);
+// }

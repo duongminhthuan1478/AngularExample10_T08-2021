@@ -1,3 +1,5 @@
+import { PageErrorComponent } from './shared/components/page-error/page-error.component';
+import { RxjsErrorConditionComponent } from './components/100days-Angular/24_rxjs-error-condition/rxjs-error-condition.component';
 import { NotificationToasterComponent } from './shared/components/notification-toaster/notification-toaster.component';
 import { FilteringOperatorRxjsComponent } from './components/100days-Angular/22_rxjs-filtering-operator/filtering-operator-rxjs.component';
 import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_rxjs_transform-operator(Pipe)/rxjs-transform-operator.component';
@@ -43,10 +45,12 @@ const routes: Routes = [
   { path:'day_21_rxjs_transform_operator', component: RxjsTransformOperatorComponent},
   { path:'day_22_rxjs_filtering_oerator', component: FilteringOperatorRxjsComponent},
   { path:'day_23_rxjs_combination', component: RxjxCombinationComponent},
+  { path:'day_24_rxjs_error_condition', component: RxjsErrorConditionComponent},
 
-  { path:'notificaiton', component: NotificationToasterComponent},
+  // { path:'notificaiton', component: NotificationToasterComponent},
 
-  
+  { path: '**', pathMatch:'full', redirectTo:'error'},
+  { path: 'error', component: PageErrorComponent}
 ];
 
 @NgModule({
