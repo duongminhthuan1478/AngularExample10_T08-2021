@@ -41,14 +41,16 @@ const routes: Routes = [
   { path:'day_15_16_DI', component: DIComponent}, // Dependency Injection
   { path:'day_17_ContentChild', component: ContentChildComponent}, // ContentChild, ContentChildren
   { path:'day_18_pipe', component: CustomSearchPipeComponent},
-  { path:'day_19_20_rxjs', component: RxjsObservableComponent},
-  { path:'day_21_rxjs_transform_operator', component: RxjsTransformOperatorComponent},
-  { path:'day_22_rxjs_filtering_oerator', component: FilteringOperatorRxjsComponent},
-  { path:'day_23_rxjs_combination', component: RxjxCombinationComponent},
-  { path:'day_24_rxjs_error_condition', component: RxjsErrorConditionComponent},
+  { path:'day_19_20_rxjs', component: RxjsObservableComponent},                        // Creation Observable
+  { path:'day_21_rxjs_transform_operator', component: RxjsTransformOperatorComponent}, // Transform Data Operator
+  { path:'day_22_rxjs_filtering_oerator', component: FilteringOperatorRxjsComponent},  // Filtering Operator
+  { path:'day_23_rxjs_combination', component: RxjxCombinationComponent},              // Combination Operator
+  { path:'day_24_rxjs_error_condition', component: RxjsErrorConditionComponent},       // Error and condition operators
+  { path:'day_25_rxjs_hoo-utility', component: RxjsErrorConditionComponent},         // Higher Order Observables, Utility Operators
 
   // { path:'notificaiton', component: NotificationToasterComponent},
 
+  // Error page
   { path: '**', pathMatch:'full', redirectTo:'error'},
   { path: 'error', component: PageErrorComponent}
 ];

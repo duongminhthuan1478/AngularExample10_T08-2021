@@ -43,6 +43,9 @@ import { RxjxCombinationComponent } from './components/100days-Angular/23_rxjs-c
 import { MenuBarComponent } from './shared/components/menu-bar/menu-bar.component';
 import { RxjsErrorConditionComponent } from './components/100days-Angular/24_rxjs-error-condition/rxjs-error-condition.component';
 import { PageErrorComponent } from './shared/components/page-error/page-error.component';
+import { HigherOrderObservableComponent } from './components/100days-Angular/25_rxjs-highter-order-utilities-operator/higher-order-observable/higher-order-observable.component';
+import { UtilityOperatorComponent } from './components/100days-Angular/25_rxjs-highter-order-utilities-operator/utility-operator/utility-operator.component';
+import { ExecuteDay25Component } from './components/100days-Angular/25_rxjs-highter-order-utilities-operator/execute-day25.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +83,10 @@ import { PageErrorComponent } from './shared/components/page-error/page-error.co
     RxjxCombinationComponent,
     MenuBarComponent,
     RxjsErrorConditionComponent,
-    PageErrorComponent
+    PageErrorComponent,
+    HigherOrderObservableComponent,
+    UtilityOperatorComponent,
+    ExecuteDay25Component,
     
   ],
   imports: [
