@@ -19,7 +19,6 @@ const tabsBsGroupProviders = [{
 @Component({
   selector: 'app-tab-bs-group',
   templateUrl: './tab-bs-group.component.html',
-  styleUrls: ['./tab-bs-group.component.scss'],
   providers: tabsBsGroupProviders
 })
 export class TabBsGroupComponent extends TabGroupComponent {

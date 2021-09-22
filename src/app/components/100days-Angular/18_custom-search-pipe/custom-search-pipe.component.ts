@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LIST_COUNTRY } from 'src/app/shared/MockData/data-mock';
+import { Country } from 'src/app/utils/interfaces';
 
 @Component({
   selector: 'app-custom-search-pipe',
@@ -19,7 +20,4 @@ export class CustomSearchPipeComponent implements OnInit {
 
 }
 
-export interface Country {
-  name;
-  code;
-}
+

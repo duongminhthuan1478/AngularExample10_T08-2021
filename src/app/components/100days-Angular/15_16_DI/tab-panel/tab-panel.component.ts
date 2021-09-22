@@ -4,8 +4,7 @@ import { TabGroupComponent } from '../tab-group/tab-group.component';
 
 @Component({
   selector: 'app-tab-panel',
-  templateUrl: './tab-panel.component.html',
-  styleUrls: ['./tab-panel.component.css']
+  templateUrl: './tab-panel.component.html'
 })
 export class TabPanelComponent implements OnInit {
   @Input() title: string;

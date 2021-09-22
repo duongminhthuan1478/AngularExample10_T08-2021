@@ -3,3 +3,8 @@ export interface ApiResponse<T> {
     isLoading: boolean,
     error: string
 }
+
+export interface Country {
+    name;
+    code;
+  }

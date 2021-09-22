@@ -1,1 +1,42 @@
-<p>higher-order-observable works!</p>
+<h2 class="text-success">Higher order observable and utility operator</h2>
+
+<ng-container *ngIf="isShowTestSwitchMap">
+    <div [formGroup]="form">
+        <input type="text" id="searchInput" class="m-3" placeholder="Search Country" formControlName="searchText"/>
+        <label class="text-primary fw-bold">Total Record: {{countries.length}}</label>
+    
+        <ng-container *ngIf="!isLoading; else loadingTmpl">
+            <table class="ml-3 table w-25">
+                <thead>
+                    <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ct of countries; let idx = index">
+                    <td>{{idx + 1}}</td>
+                    <td>{{ct.name}}</td>
+                    <td>{{ct.code}}</td>
+                    </tr>
+                </tbody>
+                </table>
+        </ng-container>
+    
+        <ng-template #loadingTmpl>
+            <h3 class="ml-3 text-danger">Loading............</h3>
+        </ng-template>
+    </div>
+</ng-container>
+
+<!-- Example tap operators-->
+<label id="tabLabel"></label>
+
+
+<!-- Spinner test finalize operator-->
+<ng-container *ngIf="isShowLoading">
+    <div class="spinner-grow text-danger d-flex centered"  style="font-size: xx-large" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</ng-container>
