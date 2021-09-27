@@ -1,4 +1,3 @@
-import { HigherOrderObservableComponent } from './components/100days-Angular/25_rxjs-highter-order-utilities-operator/higher-order-observable/higher-order-observable.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainContentProjectionComponent } from './components/100days-Angular/13_content-projection/main-content-projection/main-content-projection.component';
@@ -11,6 +10,10 @@ import { RxjsTransformOperatorComponent } from './components/100days-Angular/21_
 import { FilteringOperatorRxjsComponent } from './components/100days-Angular/22_rxjs-filtering-operator/filtering-operator-rxjs.component';
 import { RxjxCombinationComponent } from './components/100days-Angular/23_rxjs-combination/rxjx-combination.component';
 import { RxjsErrorConditionComponent } from './components/100days-Angular/24_rxjs-error-condition/rxjs-error-condition.component';
+import { HigherOrderObservableComponent } from './components/100days-Angular/25_rxjs-highter-order-utilities-operator/higher-order-observable/higher-order-observable.component';
+import { SubjectComponent } from './components/100days-Angular/26_1_rxjs-subject-and-mutilcast/subject/subject.component';
+import { JokeListComponent } from './components/100days-Angular/26_2_multicast-with-caching/joke-list/joke-list.component';
+import { MulticastModule } from './components/100days-Angular/26_2_multicast-with-caching/multicast.module';
 import { DragAndDropComponent } from './components/Angular-Material/drag-and-drop/drag-and-drop.component';
 import { AsyncAwaitComponent } from './components/async-await/async-await.component';
 import { CallApplyBindComponent } from './components/call-apply-bind/call-apply-bind.component';
@@ -37,22 +40,28 @@ const routes: Routes = [
 
   //100 days 
   { path: 'day_13_ContentProjection', component: MainContentProjectionComponent},
-  { path:'day_14', component: TabsComponent}, // ng-template, ng-container, ng-templateoutlet
-  { path:'day_15_16_DI', component: DIComponent}, // Dependency Injection
-  { path:'day_17_ContentChild', component: ContentChildComponent}, // ContentChild, ContentChildren
+  { path:'day_14', component: TabsComponent},                                          // ng-template, ng-container, ng-templateoutlet
+  { path:'day_15_16_DI', component: DIComponent},                                      // Dependency Injection
+  { path:'day_17_ContentChild', component: ContentChildComponent},                     // ContentChild, ContentChildren
   { path:'day_18_pipe', component: CustomSearchPipeComponent},
   { path:'day_19_20_rxjs', component: RxjsObservableComponent},                        // Creation Observable
   { path:'day_21_rxjs_transform_operator', component: RxjsTransformOperatorComponent}, // Transform Data Operator
-  { path:'day_22_rxjs_filtering_operator', component: FilteringOperatorRxjsComponent},  // Filtering Operator
+  { path:'day_22_rxjs_filtering_operator', component: FilteringOperatorRxjsComponent}, // Filtering Operator
   { path:'day_23_rxjs_combination', component: RxjxCombinationComponent},              // Combination Operator
   { path:'day_24_rxjs_error_condition', component: RxjsErrorConditionComponent},       // Error and condition operators
-  { path:'day_25_rxjs_hoo-utility', component: HigherOrderObservableComponent},         // Higher Order Observables, Utility Operators
+  { path:'day_25_rxjs_hoo-utility', component: HigherOrderObservableComponent},        // Higher Order Observables, Utility Operators
+  { path:'day_26_rxjs_subject', component: SubjectComponent},                          // Subject 
+  
+  { // multicast
+    path:'day_26_rxjs_multicast', 
+    loadChildren: () => import('./components/100days-Angular/26_2_multicast-with-caching/multicast.module').then(m => MulticastModule)
+  },           
 
   // { path:'notificaiton', component: NotificationToasterComponent},
 
   // Error page
-  { path: '**', pathMatch:'full', redirectTo:'error'},
-  { path: 'error', component: PageErrorComponent}
+  // { path: '**', pathMatch:'full', redirectTo:'error'},
+  // { path: 'error', component: PageErrorComponent}
 ];
 
 @NgModule({

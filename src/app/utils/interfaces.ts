@@ -5,6 +5,17 @@ export interface ApiResponse<T> {
 }
 
 export interface Country {
-    name;
-    code;
-  }
+    name: string;
+    code: string;
+}
+
+export interface Joke {
+    id: number;
+    joke: string;
+    categories: Array<string>;
+}
+  
+export interface JokeResponse {
+    type: string;
+    value: Array<Joke>;
+}

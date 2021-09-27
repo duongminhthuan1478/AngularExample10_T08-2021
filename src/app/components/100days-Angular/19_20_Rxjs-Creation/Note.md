@@ -5,7 +5,8 @@
  #  https://www.youtube.com/watch?v=lRfyUh4ex38&list=PLVmX3uPQtp3vXOXUOl8gDIA_43_pmIdFN&index=19
  #  https://www.youtube.com/watch?v=OWvK8ZB_Wrc&list=PLVmX3uPQtp3vXOXUOl8gDIA_43_pmIdFN&index=23
 
-# Observer : là một tập hợp các callbacks tương ứng cho việc lắng nghe các giá trị (next, error, hay complete) được gửi đến  bởi Observable.
+# Observable: produce data
+# Observer : là một tập hợp các callbacks tương ứng cho việc lắng nghe các giá trị (next, error, hay complete) được gửi đến  bởi Observable. Nói chung là nhận data
 # Subscription: kết quả có được sau khi thực hiện một Observable, nó thường dùng cho việc hủy việc tiếp tục xử lý.
 # Operators: là các pure functions cho phép lập trình functional với Observable.
 # Subject: để thực hiện việc gửi dữ liệu đến nhiều Observers (multicasting).

@@ -1,0 +1,1 @@
+- Subject: It was combined from both Observable (we can subscribe) and Observer (control methods error, complete, next)
