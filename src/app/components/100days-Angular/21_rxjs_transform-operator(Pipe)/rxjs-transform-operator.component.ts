@@ -51,7 +51,7 @@ export class RxjsTransformOperatorComponent implements OnInit {
   }
 
   // Using reduce to convert array to object
-  // Reduce only effect when Observable complete, check line 53.
+  // Reduce only effect when Observable complete.
   // This is same if using toArray(), need to Observable complete: https://rxjs.dev/api/operators/toArray
   private usingReduce() {
     this.showOperatorReduce = true;

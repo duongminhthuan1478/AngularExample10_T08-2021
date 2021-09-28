@@ -9,7 +9,6 @@ const routes: Routes = [  {
     component: MulticastWithCachingComponent,
     children: [
       { path: '', component: DashboardComponent},
-      // { path: 'dashboard', component: DashboardComponent},
       { path: 'jokes', component: JokeListComponent }
     ]
   },

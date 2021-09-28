@@ -45,6 +45,7 @@ import { PageErrorComponent } from './shared/components/page-error/page-error.co
 import { AutofocusDirective } from './shared/directives/autofocus.directive';
 import { ExamPipePipe } from './shared/pipes/exam-pipe.pipe';
 import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
+import { MulticastComponent } from './components/100days-Angular/26_1_rxjs-subject-and-mutilcast/multicast/multicast.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
     PageErrorComponent,
     HigherOrderObservableComponent,
     SubjectComponent,
+    MulticastComponent,
   ],
   imports: [
     BrowserModule,

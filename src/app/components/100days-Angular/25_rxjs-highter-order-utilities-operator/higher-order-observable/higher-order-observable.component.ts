@@ -158,7 +158,7 @@ export class HigherOrderObservableComponent implements OnInit {
    *  Use-case:
    *     - Used to perform side-effects/ mutation(đột biến) các giá trị like object/array, push, add new properties. See below example 1
    *     - Used to log value from source anywhere. Being good for get value when debug. See below example 1
-   *     - Can be used to set loading true/false. See more, at function searchWithouSwichMap() line 43
+   *     - Can be used to set loading true/false. See more, at function {@link searchWithouSwichMap()}
    */
   private tapOperator() {
     // Example 1

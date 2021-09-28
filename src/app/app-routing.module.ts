@@ -60,8 +60,8 @@ const routes: Routes = [
   // { path:'notificaiton', component: NotificationToasterComponent},
 
   // Error page
-  // { path: '**', pathMatch:'full', redirectTo:'error'},
-  // { path: 'error', component: PageErrorComponent}
+  { path: '**', pathMatch:'full', redirectTo:'error'},
+  { path: 'error', component: PageErrorComponent}
 ];
 
 @NgModule({

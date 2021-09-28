@@ -6,6 +6,7 @@ import { observable, Subject, BehaviorSubject } from 'rxjs';
   templateUrl: './subject.component.html'
 })
 export class SubjectComponent implements OnInit {
+  public showMulticast = false;
   
   private createObservable = observer => ({
     next: (val) => console.log(observer, val),

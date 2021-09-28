@@ -1,8 +1,9 @@
 <div class="container m-5">
-    <mat-card>
-      <div class="card-content">
-        <span class="stretch">Chuck Norris</span>
-        <a color="accent" routerLink="jokes" mat-button>VIEW</a>
-      </div>
-    </mat-card>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Chuck Norris</h5>
+      <!-- <a class="card-link" [routerLink]="['jokes']">VIEW</a> -->
+      <button class="btn-sm btn-primary" (click)="navigatoJobList()">VIEW</button>
+    </div>
   </div>
+</div>
