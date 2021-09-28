@@ -12,8 +12,9 @@ import { RxjxCombinationComponent } from './components/100days-Angular/23_rxjs-c
 import { RxjsErrorConditionComponent } from './components/100days-Angular/24_rxjs-error-condition/rxjs-error-condition.component';
 import { HigherOrderObservableComponent } from './components/100days-Angular/25_rxjs-highter-order-utilities-operator/higher-order-observable/higher-order-observable.component';
 import { SubjectComponent } from './components/100days-Angular/26_1_rxjs-subject-and-mutilcast/subject/subject.component';
+import { DashboardComponent } from './components/100days-Angular/26_2_multicast-with-caching/dashboard/dashboard.component';
 import { JokeListComponent } from './components/100days-Angular/26_2_multicast-with-caching/joke-list/joke-list.component';
-import { MulticastModule } from './components/100days-Angular/26_2_multicast-with-caching/multicast.module';
+import { MulticastWithCachingComponent } from './components/100days-Angular/26_2_multicast-with-caching/multicast-with-caching.component';
 import { DragAndDropComponent } from './components/Angular-Material/drag-and-drop/drag-and-drop.component';
 import { AsyncAwaitComponent } from './components/async-await/async-await.component';
 import { CallApplyBindComponent } from './components/call-apply-bind/call-apply-bind.component';
@@ -50,12 +51,13 @@ const routes: Routes = [
   { path:'day_23_rxjs_combination', component: RxjxCombinationComponent},              // Combination Operator
   { path:'day_24_rxjs_error_condition', component: RxjsErrorConditionComponent},       // Error and condition operators
   { path:'day_25_rxjs_hoo-utility', component: HigherOrderObservableComponent},        // Higher Order Observables, Utility Operators
-  { path:'day_26_rxjs_subject', component: SubjectComponent},                          // Subject 
+  { path:'day_26_rxjs_subject', component: SubjectComponent},                          // Subject and simple multicast
   
-  { // multicast
-    path:'day_26_rxjs_multicast', 
-    loadChildren: () => import('./components/100days-Angular/26_2_multicast-with-caching/multicast.module').then(m => MulticastModule)
-  },           
+  { path:'day_26_rxjs_multicast', component: MulticastWithCachingComponent,            // Multicast with caching data. Component nested need a router-outlet in parent
+    children: [
+     { path: '', pathMatch: 'full', component: DashboardComponent},
+     { path: 'jokes', component: JokeListComponent}
+  ]},           
 
   // { path:'notificaiton', component: NotificationToasterComponent},
 
