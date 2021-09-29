@@ -1,3 +1,5 @@
+import { ArticalDetailComponent } from './components/100days-Angular/27_28_Router/artical-detail/artical-detail.component';
+import { ArticleComponent } from './components/100days-Angular/27_28_Router/article/article.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainContentProjectionComponent } from './components/100days-Angular/13_content-projection/main-content-projection/main-content-projection.component';
@@ -59,11 +61,12 @@ const routes: Routes = [
      { path: 'jokes', component: JokeListComponent}
   ]},           
 
-  // { path:'notificaiton', component: NotificationToasterComponent},
+  { path:'day_27_28_router/articles', component: ArticleComponent},       // Router + ActivatedRoute
+  { path:'day_27_28_router/articles/detail/:slug', component: ArticalDetailComponent},     // Router + ActivatedRoute, slug: like a url -header article for seo
 
   // Error page
   { path: '**', pathMatch:'full', redirectTo:'error'},
-  { path: 'error', component: PageErrorComponent}
+  // { path: 'error', component: PageErrorComponent}
 ];
 
 @NgModule({

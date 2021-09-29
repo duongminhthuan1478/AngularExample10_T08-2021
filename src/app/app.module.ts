@@ -52,6 +52,8 @@ import { PageErrorComponent } from './shared/components/page-error/page-error.co
 import { AutofocusDirective } from './shared/directives/autofocus.directive';
 import { ExamPipePipe } from './shared/pipes/exam-pipe.pipe';
 import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
+import { ArticalDetailComponent } from './components/100days-Angular/27_28_Router/artical-detail/artical-detail.component';
+import { ArticleComponent } from './components/100days-Angular/27_28_Router/article/article.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +96,9 @@ import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
     SubjectComponent,
     MulticastComponent,
     MulticastWithCachingComponent,
-    JokeListComponent
+    JokeListComponent,
+    ArticalDetailComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,

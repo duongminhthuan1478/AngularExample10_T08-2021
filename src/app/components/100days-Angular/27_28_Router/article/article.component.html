@@ -1,0 +1,24 @@
+<div class="container-fluid pt-3">
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let article of _article.getArticles() | async">
+            <div class="card">
+                <p class="card-header p-2 ">{{article.title}}</p>
+                <div class="card-body">
+                    <p class="card-text">{{article.body}}</p>
+                    <a [routerLink]="['detail', article.slug]" class="btn btn-primary pull-right">View more</a> 
+                    <!-- Param 'detail'. Angular use current url and append slash(/) + detail. It is similar to ./detail
+                        If param '/detail'. Angular will get root url and append detail. 
+                        For example: http://localhost:4200/day_27_28_router/articles -> http://localhost:4200/detail
+                    -->
+                    
+                    <!-- Another way to [routerLink]. Using router's navigate(), it's similiar to [routerLink] but using in typescrip file 
+                        Some case we cannot using routerLink if a component parent have children components navigate each other.
+                        
+                        Example: check app-routing at: day_26_rxjs_multicast, dashboard.component cannot use routerLink. 
+                        Solution: we used navigate() for replacement
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  

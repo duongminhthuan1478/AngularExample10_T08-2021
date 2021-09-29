@@ -19,3 +19,10 @@ export interface JokeResponse {
     type: string;
     value: Array<Joke>;
 }
+
+export interface Article {
+    title: string;
+    body: string;
+    detail: string;
+    slug: string;
+}
