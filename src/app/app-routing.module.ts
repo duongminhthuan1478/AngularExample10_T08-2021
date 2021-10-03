@@ -1,5 +1,3 @@
-import { ArticalDetailComponent } from './components/100days-Angular/27_28_Router/artical-detail/artical-detail.component';
-import { ArticleComponent } from './components/100days-Angular/27_28_Router/article/article.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainContentProjectionComponent } from './components/100days-Angular/13_content-projection/main-content-projection/main-content-projection.component';
@@ -26,7 +24,6 @@ import { AppResolverService } from './components/routing-resolve/services/app-re
 import { ShareAComponent } from './components/share-service/components/share-a/share-a.component';
 import { SpreadOperatorComponent } from './components/spread-operator/spread-operator.component';
 import { TestReduceComponent } from './components/test-reduce/test-reduce.component';
-import { PageErrorComponent } from './shared/components/page-error/page-error.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'drag-drop', pathMatch: 'full' },
@@ -61,8 +58,11 @@ const routes: Routes = [
      { path: 'jokes', component: JokeListComponent}
   ]},           
 
-  { path:'day_27_28_router/articles', component: ArticleComponent},       // Router + ActivatedRoute
-  { path:'day_27_28_router/articles/detail/:slug', component: ArticalDetailComponent},     // Router + ActivatedRoute, slug: like a url -header article for seo
+  // Router + ActivatedRoute
+  // Router + ActivatedRoute, slug: like a url -header article for seo
+  // Day 29: Lazy module for 27_28
+  { path: 'day_27_28_router', loadChildren: () => import('./components/100days-Angular/27_28_Router/article.module').then(x => x.ArticleModule)},
+  
 
   // Error page
   { path: '**', pathMatch:'full', redirectTo:'error'},

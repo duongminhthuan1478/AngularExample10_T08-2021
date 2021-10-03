@@ -34,6 +34,7 @@ import { RxjsErrorConditionComponent } from './components/100days-Angular/24_rxj
 import { HigherOrderObservableComponent } from './components/100days-Angular/25_rxjs-highter-order-utilities-operator/higher-order-observable/higher-order-observable.component';
 import { MulticastComponent } from './components/100days-Angular/26_1_rxjs-subject-and-mutilcast/multicast/multicast.component';
 import { SubjectComponent } from './components/100days-Angular/26_1_rxjs-subject-and-mutilcast/subject/subject.component';
+import { DashboardComponent } from './components/100days-Angular/26_2_multicast-with-caching/dashboard/dashboard.component';
 import { JokeListComponent } from './components/100days-Angular/26_2_multicast-with-caching/joke-list/joke-list.component';
 import { MulticastWithCachingComponent } from './components/100days-Angular/26_2_multicast-with-caching/multicast-with-caching.component';
 import { DragAndDropComponent } from './components/Angular-Material/drag-and-drop/drag-and-drop.component';
@@ -52,8 +53,6 @@ import { PageErrorComponent } from './shared/components/page-error/page-error.co
 import { AutofocusDirective } from './shared/directives/autofocus.directive';
 import { ExamPipePipe } from './shared/pipes/exam-pipe.pipe';
 import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
-import { ArticalDetailComponent } from './components/100days-Angular/27_28_Router/artical-detail/artical-detail.component';
-import { ArticleComponent } from './components/100days-Angular/27_28_Router/article/article.component';
 
 @NgModule({
   declarations: [
@@ -97,8 +96,7 @@ import { ArticleComponent } from './components/100days-Angular/27_28_Router/arti
     MulticastComponent,
     MulticastWithCachingComponent,
     JokeListComponent,
-    ArticalDetailComponent,
-    ArticleComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
