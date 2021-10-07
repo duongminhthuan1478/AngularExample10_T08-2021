@@ -1,3 +1,5 @@
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { Observable } from 'rxjs';
 export interface ApiResponse<T> {
     data: T,
     isLoading: boolean,
@@ -25,4 +27,8 @@ export interface Article {
     body: string;
     detail: string;
     slug: string;
+}
+
+export interface ICheckDeactivate {
+    checkDeactivate(currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot): Observable<boolean> | boolean;
 }

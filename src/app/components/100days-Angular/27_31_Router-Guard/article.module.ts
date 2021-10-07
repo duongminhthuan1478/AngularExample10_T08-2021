@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArticleRoutingModule } from './article-routing.module';
@@ -13,6 +14,7 @@ import { ArticalEditComponent } from './artical-edit/artical-edit.component';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     ArticleRoutingModule,
   ]
 })

@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <p class="card-text">{{article.body}}</p>
                     <a [routerLink]="['detail', article.slug]" class="btn btn-primary pull-right">View more</a> 
-                    <a class="btn btn-primary pull-right ml-2" (click)="onEditClick(article.slug)">Edit</a> 
+                    <a class="btn btn-secondary pull-right mr-2" (click)="onEditClick(article.slug)">Edit</a> 
                     <!-- Param 'detail'. Angular use current url and append slash(/) + detail. It is similar to ./detail
                         If param '/detail'. Angular will get root url and append detail. 
                         For example: http://localhost:4200/day_27_28_router/articles -> http://localhost:4200/detail

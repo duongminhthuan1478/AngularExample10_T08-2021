@@ -15,7 +15,7 @@ const routes: Routes = [
     data: { userName: 'thuanduong', isOnline: true},
     children: [
       { path:'detail/:slug',  component: ArticalDetailComponent},
-      // { path:'edit/:slug',  component: ArticalEditComponent}
+      { path:'edit/:slug',  component: ArticalEditComponent, canDeactivate: [ArticleGuard]}
     ]
   }  
 ];

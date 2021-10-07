@@ -24,6 +24,7 @@ import { AppResolverService } from './components/routing-resolve/services/app-re
 import { ShareAComponent } from './components/share-service/components/share-a/share-a.component';
 import { SpreadOperatorComponent } from './components/spread-operator/spread-operator.component';
 import { TestReduceComponent } from './components/test-reduce/test-reduce.component';
+import { ArticleGuard } from './guards/article.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'drag-drop', pathMatch: 'full' },
@@ -61,7 +62,11 @@ const routes: Routes = [
   // Router + ActivatedRoute
   // Router + ActivatedRoute, slug: like a url -header article for seo
   // Day 29: Lazy module for 27_28
-  { path: 'day_27_28_router', loadChildren: () => import('./components/100days-Angular/27_28_Router/article.module').then(x => x.ArticleModule)},
+  { 
+    path: 'day_27_28_router/', 
+    loadChildren: () => import('./components/100days-Angular/27_31_Router-Guard/article.module').then(x => x.ArticleModule),
+    canLoad:[ArticleGuard] 
+  },
   
 
   // Error page
@@ -70,7 +75,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {enableTracing: false})],
+  imports: [RouterModule.forRoot(routes, {enableTracing: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
