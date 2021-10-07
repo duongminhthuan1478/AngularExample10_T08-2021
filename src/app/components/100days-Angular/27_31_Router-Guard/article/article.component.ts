@@ -13,7 +13,7 @@ export class ArticleComponent implements OnInit {
   ngOnInit(): void {}
 
   public onEditClick(slug) {
-    // this.router.navigate(['day_27_28_router', '', 'edit', slug]);
-    this.router.navigate(['day_27_28_router/articles/edit', slug]);
+    // this.router.navigate(['route-and-guard', '', 'edit', slug]);
+    this.router.navigate(['route-and-guard/articles/edit', slug]);
   }
 }

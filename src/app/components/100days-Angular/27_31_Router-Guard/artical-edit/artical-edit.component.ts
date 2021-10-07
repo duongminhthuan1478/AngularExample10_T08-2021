@@ -47,6 +47,6 @@ export class ArticalEditComponent implements OnInit, ICheckDeactivate {
   }
 
   public goBack() {
-    this.router.navigate(['day_27_28_router', 'articles']);
+    this.router.navigate(['route-and-guard', 'articles']);
   }
 }

@@ -9,7 +9,7 @@ import { ICheckDeactivate } from '../utils/interfaces';
   providedIn: 'root'
 })
 export class ArticleGuard implements CanActivate, CanActivateChild, CanLoad, CanDeactivate<ICheckDeactivate> {
-  private currentUser = {userName: null, isOnlue: false};
+  private currentUser = {userName: 'thuan', isOnlue: false};
   constructor(private _article: ArticleService) {}
 
   canLoad(route: Route, segments: UrlSegment[]): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {

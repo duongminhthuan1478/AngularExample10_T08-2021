@@ -13,6 +13,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void { }
 
   public navigatoJobList() {
-    this.router.navigate(['day_26_rxjs_multicast/jokes'])
+    this.router.navigate(['rxjs-multicast/jokes'])
   }
 }

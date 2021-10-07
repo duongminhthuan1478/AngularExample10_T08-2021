@@ -39,43 +39,39 @@ const routes: Routes = [
   //Angular material
   { path: 'drag-drop', component: DragAndDropComponent},
 
-  //100 days 
-  { path: 'day_13_ContentProjection', component: MainContentProjectionComponent},
-  { path:'day_14', component: TabsComponent},                                          // ng-template, ng-container, ng-templateoutlet
-  { path:'day_15_16_DI', component: DIComponent},                                      // Dependency Injection
-  { path:'day_17_ContentChild', component: ContentChildComponent},                     // ContentChild, ContentChildren
-  { path:'day_18_pipe', component: CustomSearchPipeComponent},
-  { path:'day_19_20_rxjs', component: RxjsObservableComponent},                        // Creation Observable
-  { path:'day_21_rxjs_transform_operator', component: RxjsTransformOperatorComponent}, // Transform Data Operator
-  { path:'day_22_rxjs_filtering_operator', component: FilteringOperatorRxjsComponent}, // Filtering Operator
-  { path:'day_23_rxjs_combination', component: RxjxCombinationComponent},              // Combination Operator
-  { path:'day_24_rxjs_error_condition', component: RxjsErrorConditionComponent},       // Error and condition operators
-  { path:'day_25_rxjs_hoo-utility', component: HigherOrderObservableComponent},        // Higher Order Observables, Utility Operators
-  { path:'day_26_rxjs_subject', component: SubjectComponent},                          // Subject and simple multicast
+  //100 days Angular
+  { path: 'content-projection', component: MainContentProjectionComponent},      // ng-contain
+  { path:'template', component: TabsComponent},                                        // ng-template, ng-container, ng-templateoutlet
+  { path:'DI', component: DIComponent},                                                // Dependency Injection
+  { path:'DI/content-child', component: ContentChildComponent},                        // ContentChild, ContentChildren
+  { path:'search-pipe', component: CustomSearchPipeComponent},    
+  { path:'rxjs-creation', component: RxjsObservableComponent},                         //19-20: Creation Observable
+  { path:'rxjs-transform-operator', component: RxjsTransformOperatorComponent},        //21: Transform Data Operator
+  { path:'rxjs-filtering-operator', component: FilteringOperatorRxjsComponent},        //22: Filtering Operator
+  { path:'rxjs-combination', component: RxjxCombinationComponent},                     //23: Combination Operator
+  { path:'rxjs-error-condition', component: RxjsErrorConditionComponent},              //24: Error and condition operators
+  { path:'rxjs-hoo-utility', component: HigherOrderObservableComponent},               //25: Higher Order Observables, Utility Operators
+  { path:'rxjs-subject', component: SubjectComponent},                                 //26 Subject and simple multicast
   
-  { path:'day_26_rxjs_multicast', component: MulticastWithCachingComponent,            // Multicast with caching data. Component nested need a router-outlet in parent
+  { path:'rxjs-multicast', component: MulticastWithCachingComponent,                   //27: Multicast with caching data. Component nested need a router-outlet in parent
     children: [
      { path: '', pathMatch: 'full', component: DashboardComponent},
      { path: 'jokes', component: JokeListComponent}
   ]},           
 
-  // Router + ActivatedRoute
-  // Router + ActivatedRoute, slug: like a url -header article for seo
-  // Day 29: Lazy module for 27_28
-  { 
-    path: 'day_27_28_router/', 
+  { path: 'route-and-guard', 
     loadChildren: () => import('./components/100days-Angular/27_31_Router-Guard/article.module').then(x => x.ArticleModule),
     canLoad:[ArticleGuard] 
   },
   
 
   // Error page
-  { path: '**', pathMatch:'full', redirectTo:'error'},
+  // { path: '**', pathMatch:'full', redirectTo:'error'},
   // { path: 'error', component: PageErrorComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {enableTracing: true})],
+  imports: [RouterModule.forRoot(routes, {enableTracing: false})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

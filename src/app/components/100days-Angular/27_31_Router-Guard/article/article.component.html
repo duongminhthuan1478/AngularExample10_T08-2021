@@ -9,13 +9,13 @@
                     <a class="btn btn-secondary pull-right mr-2" (click)="onEditClick(article.slug)">Edit</a> 
                     <!-- Param 'detail'. Angular use current url and append slash(/) + detail. It is similar to ./detail
                         If param '/detail'. Angular will get root url and append detail. 
-                        For example: http://localhost:4200/day_27_28_router/articles -> http://localhost:4200/detail
+                        For example: http://localhost:4200/route-and-guard/articles -> http://localhost:4200/detail
                     -->
                     
                     <!-- Another way to [routerLink]. Using router's navigate(), it's similiar to [routerLink] but using in typescrip file 
                         Some case we cannot using routerLink if a component parent have children components navigate each other.
                         
-                        Example: check app-routing at: day_26_rxjs_multicast, dashboard.component cannot use routerLink. 
+                        Example: check app-routing at: rxjs-multicast, dashboard.component cannot use routerLink. 
                         Solution: we used navigate() for replacement
                     -->
                 </div>

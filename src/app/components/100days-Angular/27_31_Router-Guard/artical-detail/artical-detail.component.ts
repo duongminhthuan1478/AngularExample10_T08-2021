@@ -39,7 +39,7 @@ export class ArticalDetailComponent implements OnInit {
           return this._article.findOne(slug);;
         }
         else {
-          this.router.navigate(['/day_27_28_router/articles'])
+          this.router.navigate(['/route-and-guard/articles'])
           return null;
         }
       }),

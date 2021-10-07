@@ -16,7 +16,7 @@ export class MulticastWithCachingComponent implements OnInit {
   ngOnInit(): void {
     this.isRoot = this.router.events.pipe(
       filter(x => x instanceof NavigationEnd),
-      map((x: RouterEvent) => x.url != '/day_26_rxjs_multicast')
+      map((x: RouterEvent) => x.url != '/rxjs-multicast')
     );
   }
 
